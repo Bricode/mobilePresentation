@@ -1,10 +1,10 @@
-## Mobile Presentation
+# Mobile Presentation
 
-# Chosen topic: Notifications
+## Chosen topic: Notifications
 
 The topic I chose to cover was push-notifications. These can be fired from a variety of events within your app, and are useful to inform your user about changes in state when they dont currently have the app open in front of them, or to store information for later in the task bar.
 
-# Required Dependencies
+## Required Dependencies
 ```
 dependencies {
   implementation("androidx.core:core-ktx:1.6.0")
@@ -14,7 +14,7 @@ In order to use notifications, you need to have the core-ktx dependency in your 
 Portions of this code were gathered from the android developer tutorial page on notifcations, AndroidDev, 2021-november-11,Create a notification, https://developer.android.com/training/notify-user/build-notification
 For information on implementing larger notifications, reference the website mentioned above.
 /n
-# Code implementation
+## Code implementation
 
 ```
 import android.app.NotificationChannel
@@ -82,10 +82,10 @@ Lastly, we need to attach the built notification to an event, this could be anyt
 | CHANNEL_ID | Identifier that groups notifications together in task bar |
 | NotificationId | Identifier that allows for the app to update or delete notifications in future |
 
-# Potential implementaions into my travelling app:
+## Potential implementaions into my travelling app:
   Send a notification when the user comes within a certain distance of the tourist attractions letting them know of their proximity to it. /n
   Send a notification of one common phrase of the week to challenge the user to fit it into a conversation.
   
 References: 
-https://developer.android.com/training/notify-user/build-notification
+https://developer.android.com/training/notify-user/build-notification /n
 https://medium.com/exploring-android/exploring-android-o-notification-channels-94cd274f604c
