@@ -24,18 +24,22 @@ class MainActivity : AppCompatActivity() {
     }
     var builder = NotificationCompat.Builder(this, NotificationCompat.EXTRA_CHANNEL_ID)
         .setSmallIcon(R.drawable.ic_launcher_foreground)
+            //sets the title
         .setContentTitle("Test")
+            //sets the text contained within
         .setContentText("test")
+        //sets the level of importance that determines notifications, what it appears over, if sound will play etc
         .setPriority(NotificationCompat.PRIORITY_DEFAULT)
 
 
-        .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+    //registers the notification with the system, so that it knows to expect notifications
     private fun createNotificationChannel() {
         // Create the NotificationChannel, but only on API 26+ because
         // the NotificationChannel class is new and not in the support library
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val name = "Test"
             val descriptionText = "Testing notification"
+            //tells the system the oberall importance of the notifications being sent
             val importance = NotificationManager.IMPORTANCE_DEFAULT
             val channel = NotificationChannel(NotificationCompat.EXTRA_CHANNEL_ID, name, importance).apply {
                 description = descriptionText
