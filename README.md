@@ -11,9 +11,9 @@ dependencies {
 }
 ```
 In order to use notifications, you need to have the core-ktx dependency in your module build.gradle file.
-Portions of this code were gathered from the android developer tutorial page on notifcations, AndroidDev, 2021-november-11,Create a notification, https://developer.android.com/training/notify-user/build-notification
+Portions of this code were gathered from the android developer tutorial page on notifcations, AndroidDev, 2021-november-11, Create a notification, https://developer.android.com/training/notify-user/build-notification
 For information on implementing larger notifications, reference the website mentioned above.
-/n
+\n
 ## Code implementation
 
 ```
@@ -74,7 +74,7 @@ The variable "builder" is where the content that is sent in the notification is 
 The function "createNotificationChannel" is what connects your app with the system its running on.
 The details of the channel are pased through the notification manager
 "Notification Channels provide us with the ability to group the notifications that our application sends into manageable groups" - Birch J , 2017 march 23, Exploring Android 0: Notification Channels, https://medium.com/exploring-android/exploring-android-o-notification-channels-94cd274f604c
-/n
+\n
 Lastly, we need to attach the built notification to an event, this could be anything, but for simplicity, I have it running on a button click.
 
 | Values of note | Description |
@@ -83,9 +83,9 @@ Lastly, we need to attach the built notification to an event, this could be anyt
 | NotificationId | Identifier that allows for the app to update or delete notifications in future |
 
 ## Potential implementaions into my travelling app:
-  Send a notification when the user comes within a certain distance of the tourist attractions letting them know of their proximity to it. /n
+  Send a notification when the user comes within a certain distance of the tourist attractions letting them know of their proximity to it. \n
   Send a notification of one common phrase of the week to challenge the user to fit it into a conversation.
   
 References: 
-https://developer.android.com/training/notify-user/build-notification /n
+https://developer.android.com/training/notify-user/build-notification \n
 https://medium.com/exploring-android/exploring-android-o-notification-channels-94cd274f604c
