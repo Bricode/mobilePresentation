@@ -10,11 +10,11 @@ dependencies {
   implementation("androidx.core:core-ktx:1.6.0")
 }
 ```
-In order to use notifications, you need to have the core-ktx dependency in your module build.gradle file.
+
 Portions of this code were gathered from the android developer tutorial page on notifcations, AndroidDev, 2021-november-11, Create a notification, https://developer.android.com/training/notify-user/build-notification
 For information on implementing larger notifications, reference the website mentioned above.
   
-## Code implementation
+## Main Activity
 
 ```
 import android.app.NotificationChannel
@@ -41,9 +41,9 @@ class MainActivity : AppCompatActivity() {
     var builder = NotificationCompat.Builder(this, NotificationCompat.EXTRA_CHANNEL_ID)
         .setSmallIcon(R.drawable.ic_launcher_foreground)
             //sets the title
-        .setContentTitle("Test")
+        .setContentTitle("Example Title")
             //sets the text contained within
-        .setContentText("test")
+        .setContentText("Example content text")
         //sets the level of importance that determines notifications, what it appears over, if sound will play etc
         .setPriority(NotificationCompat.PRIORITY_DEFAULT)
     
@@ -69,9 +69,9 @@ class MainActivity : AppCompatActivity() {
 ```
 Lets take a look at what each of these pieces is doing.  
 
-The variable "builder" is where the content that is sent in the notification is set, as well as how intrusive this notification is allowed to be.  
+The variable **builder** is where the content that is sent in the notification is set, as well as how intrusive this notification is allowed to be.  
 
-The function "createNotificationChannel" is what connects your app with the system its running on.
+The function **createNotificationChannel** is what connects your app with the system its running on.
 The details of the channel are pased through the notification manager
 "Notification Channels provide us with the ability to group the notifications that our application sends into manageable groups" - Birch J , 2017 march 23, Exploring Android 0: Notification Channels, https://medium.com/exploring-android/exploring-android-o-notification-channels-94cd274f604c
   
